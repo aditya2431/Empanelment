@@ -19,6 +19,7 @@ import AuditTrail from './pages/AuditTrail';
 import AdminRegister from './pages/AdminRegister';
 import SubDashboard from './pages/Sub-Dashboard';
 import Profile from './pages/Profile';
+import './index.css'
 
 const store=reduxStore();
 const root = ReactDOM.createRoot(document.getElementById('root'));

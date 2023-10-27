@@ -10,8 +10,8 @@
     margin-top:15px;
     margin-left: 20px;
     z-index: 1;
+    
   } 
-
   .login-container {
     display: flex;
     justify-content: center;
@@ -21,8 +21,8 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
-   
-   
+    -webkit-filter: hue-rotate(516deg);
+    filter: hue-rotate(516deg);
   }
   
   .login-card {
@@ -41,7 +41,7 @@
   .login-card-left {
     flex: 1;
     /* background: linear-gradient(135deg, #FF5733, #FF3157); */
-    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    background: linear-gradient(135deg, #2980b9, #2c3e50);/* differs colors because of webkit-filter*/
     color: #fff;
     padding: 30px;
     display: flex;
@@ -95,11 +95,11 @@
   }
   
   button {
-    background-color: #007bff;
+    background-color: #0a0ade; /** as we converted the background image color using webkit-filter and its applied on high level,it affects the child colors as well. */
     color: #fff;
     border: none;
     padding: 12px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 15px;
