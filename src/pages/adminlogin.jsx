@@ -27,12 +27,12 @@ function Login() {
             {/* You can add suitable icons here */}
             {/* <i className="fa fa-user"></i> */}
           </div>
-          <h1 style={{fontFamily:"Noto Sans"}}>Welcome to Aditya Birla Capital Family</h1>
-          <p style={{fontFamily:"Noto Sans"}}>You are a few steps away. Login to start your journey with us.</p>
+          <h1 >Welcome to Aditya Birla Capital Family</h1>
+          <p >You are a few steps away. Login to start your journey with us.</p>
           
         </div>
         <div className="login-card-right">
-          <h2 style={{fontFamily:"Noto Sans"}}>Login</h2>
+          <h2 >Login</h2>
           <div className="form-group1">
             {/* <label>Email:</label> */}
             <input
