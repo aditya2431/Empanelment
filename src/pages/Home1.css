@@ -1,0 +1,389 @@
+/* Home.css */
+
+/* Styling the container */
+/* .general {
+    background-color: #f06d6d;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* margin: 20px; */
+  
+  
+  /* Styling the form */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Styling input fields */
+  .input-custom {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  /* Style the "General Information" header */
+  h4 {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    color: red; /* Blue color */
+  }
+  
+  /* Style the Save and Next buttons */
+  /* .buttons {
+    text-align: right;
+  } */
+  
+  /* Styling the "Submit" button */
+  /* Button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    /* padding: 10px 20px; */
+    /* font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  } */ 
+  
+  /* Button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  
+  
+  /* Styling the "Back" button */
+  /* Button[color="inherit"] {
+    color: #007bff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  } */
+  
+  /* Button[color="inherit"]:hover {
+    color: #0056b3; /* Darker blue on hover */
+  
+  /* Styling the "Save" button */
+  .save Button {
+   
+    color: white;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    /* padding: 10px 20px; */
+    margin-right: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s, border 0.3s;
+  } 
+  
+  /* .save Button:hover {
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #0056b3;
+  } */
+  
+  /* Add a subtle box shadow to the card */
+  .card-custom {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  /* Home.css */
+
+/* Styling the "Next" and "Back" buttons */
+/* .buttons {
+    text-align: right;
+    /* margin-top: 20px; */
+  
+  
+  /* Styling the "Next" button */
+  .buttons Button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: right;
+    /* padding: 10px 20px; */
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+   
+  /* .buttons Button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  
+  
+  /* Styling the "Back" button */
+  .buttons Button[color="inherit"] {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+  }
+  
+  .buttons Button[color="inherit"]:hover {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #0056b3;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: center;
+}
+.question{
+    font-size: 20px;
+    font-family:Inter;
+}
+.gradient-custom {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    } 
+    .card-custom {
+    border-bottom-left-radius: 10% 50%;
+    border-top-left-radius: 10% 50%;
+    background-color: #f8f9fa ;
+    }
+    .input-custom {
+    background-color: white ;
+    }
+ 
+    .white-text {
+    color: hsl(52, 0%, 98%);
+    font-weight: 100 ;
+    font-size: 14px;
+    }
+    .floating-label {
+        position: absolute;
+        pointer-events: none;
+        left: 20px;
+        top: 18px;
+        transition: 0.2s ease all;
+      }
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 35px;
+}
+.general{
+    margin-top: -95px;
+    margin-right:20px;
+    margin-left:50px;
+}
+
+.form-label{
+    font-size: 11px;
+}
+.text{
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 100px;
+    margin-top:0px;
+} 
+
+      
+ .file{
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown{
+    margin-left: 430px;
+    width: 180px;
+    margin-right: 100px;
+}
+
+.save{
+    margin-left:700px;
+}
+.drawerList{
+    font-size: 50px;
+}
+.form-group.required .control-label:after {content:"*";color:red;}
+
+
+.form-control::placeholder {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+.tabular{
+    width: 100;
+    padding: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+ 
+.save [color="inherit"] {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+  }
+ .info{
+    text-align: left;
+    font-size: 24px;
+    margin-left: 85px;
+    color: red;
+ }
+ .general-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 70px;
+    max-height: 40px;
+    margin-top:25px;
+    margin-left: 80px;
+    z-index: 1;
+ }
+  /* Home1.css */
+
+/* Home1.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  .form-group input {
+    margin-left: 30;
+    height: 48px;
+    padding: 0px 14px;
+  }
+  
+  .form-group label {
+    height: 30px;
+    font-size: 13px;
+    font-weight: 560;
+    top: -3px;
+  }
+  
+  .form-group label[data-shrink="true"] {
+    top: 0;
+  }
+  
+  
+  /* Styling input fields */
+
+/* Styling input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: 0.2s;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+    /* outline: none; /* Remove the outline on input focus* */
+}
+  
+   label {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    transition: 0.2s ease-in-out;
+    font-size: 14px;
+    color: black; /* Placeholder label color */
+    background: white;
+    padding: 0 3px; 
+   }
+  
+  
+  input:focus + label,
+  input:valid + label {
+    top: -15px;
+    font-size: 12px;
+    color: black; /* Transitioned label color */
+    background: white;
+    padding: 0 3px; 
+  }
+  
+   
+  input:placeholder-shown + label {
+    top: 8px;
+    font-size: 14px;
+    color: #007bff; /* Placeholder label color */
+    background: white;
+    padding: 0 3px;
+  }
+
+    /* Styling input fields */
+
+
+
+    /* .docInput{
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    } */
+
+
+    .file-label {
+        font-size: 16px;
+        margin-left: 10px;
+        color: #007bff;
+        cursor: pointer;
+      }
+
+
+      .label-button {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .label-button:hover {
+        background-color: #0056b3;
+      }
+
+      /* .file-input-container {
+        display: flex;
+        align-items: center;
+      } */
+
+
+      .docInput{
+        
+        padding: 10px;
+        transition: 0.2s;
+        font-size: 16px;
+      }
+
+      .MuiFormLabel-asterisk {
+        color: red;
+    }

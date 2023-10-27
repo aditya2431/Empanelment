@@ -1,0 +1,48 @@
+.advance-sign-form-wizard {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+  }
+  
+  .step.active {
+    color: black;
+  }
+  
+  .step-content {
+    padding: 20px;
+  }
+  
+  .advance-sign-form-wizard h1 {
+    text-align: center;
+  }
+  
+  .advance-sign-form-wizard label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .advance-sign-form-wizard input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .advance-sign-form-wizard button {
+    margin-top: 10px;
+    padding: 10px 20px;
+  }  

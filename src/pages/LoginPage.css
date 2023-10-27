@@ -1,0 +1,143 @@
+/*App.css*/
+@import "~font-awesome/css/font-awesome.min.css";
+
+  .login-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 120px;
+    max-height: 85px;
+    margin-top:15px;
+    margin-left: 20px;
+    z-index: 1;
+  } 
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../assets/background1.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+   
+   
+  }
+  
+  .login-card {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    height: 500px;
+    width: 100%;
+   
+   
+  }
+
+  .login-card-left {
+    flex: 1;
+    /* background: linear-gradient(135deg, #FF5733, #FF3157); */
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+   
+  .login-card-left h1 {
+    font-size: 28px;
+  }
+  
+  .login-card-left p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .icon {
+    font-size: 96px;
+    color: red;
+  }
+  
+  .login-card-right {
+    flex: 1;
+    margin-top: 80px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group1 {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+  }
+   
+  label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .signup-button {
+    background-color: #28a745;
+  }
+  
+  .signup-button:hover {
+    background-color: #218838;
+  }
+  .login-card-right-register{
+    flex: 1;
+    margin-top: 49px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-card-right-user{
+    flex: 1;
+    margin-top: 150px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+
+
+
+
