@@ -4,6 +4,8 @@ import Logo from "../assets/Logo.JPG";
 import { Navigate, useNavigate } from 'react-router-dom';
 function AdminRegister() {
   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [mobileNumber,setMobileNumber] = useState('');
   const [role,setRole] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -38,9 +40,9 @@ console.log(role);
             <input
             style={{borderLeft:"solid",borderLeftColor:"blue"}}
               type="text"
-              value={email}
+              value={name}
               placeholder='Name'
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="form-group1">
@@ -58,9 +60,9 @@ console.log(role);
             <input
             style={{borderLeft:"solid",borderLeftColor:"blue"}}
               type="text"
-              value={email}
+              value={mobileNumber}
               placeholder='Mobile Number'
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setMobileNumber(e.target.value)}
             />
           </div>
           {/* className="form-group1" */}

@@ -128,7 +128,7 @@ export default function MiniDrawer() {
                   <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                 </ListItemButton>
               )}
-              {index == 1 && (
+              {/* {index == 1 && (
                 <ListItemButton
                   //  button component={Link} to="/"
 
@@ -149,7 +149,7 @@ export default function MiniDrawer() {
                   </ListItemIcon>
                   <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                 </ListItemButton>
-              )}
+              )} */}
               {index == 2 && (
                 <ListItemButton
                   //  button component={Link} to="/"
@@ -196,7 +196,7 @@ export default function MiniDrawer() {
               )}
               {index == 4 && (
                 <ListItemButton
-                  //  button component={Link} to="/"
+                   button component={Link} to="/profile"
 
                   sx={{
                     minHeight: 48,

@@ -13,19 +13,21 @@ const Dashboard = () => {
         src={Logo}
         alt="Card"
         />
-    <h1 style={{fontSize:20,marginLeft:570,marginBottom:20,fontFamily:"Noto Sans",fontWeight:"bold"}}>DashBoard For RM</h1>
+    {/* <h1 style={{fontSize:20,marginLeft:570,marginBottom:20,fontFamily:"Noto Sans",fontWeight:"bold"}}>DashBoard For RM</h1> */}
     <div className="table-container">
       <table className="custom-table">
         <thead>
           <tr>
-            <th>Activity Name</th>
-            <th>Count</th>
+            <th>WorkFlow Number</th>
+            <th>Submitted By</th>
+            <th>Submitted on</th>
+            <th>Status</th>
           </tr>
         </thead>
-        <tbody>
+        {/* <tbody>
           <tr>
             <td>Total request raised</td>
-            <td><Link to={"/subDashboard"}>10</Link></td>
+            <td><Link to={"/home"}>10</Link></td>
           </tr>
           <tr>
             <td>Activity 2</td>
@@ -39,7 +41,7 @@ const Dashboard = () => {
             <td>Activity 4</td>
             <td>20</td>
           </tr>
-        </tbody>
+        </tbody> */}
       </table>
     </div>
     </>

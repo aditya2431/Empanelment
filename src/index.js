@@ -17,7 +17,8 @@ import UserLogin from './pages/UserLogin';
 import NatDashboard from './pages/NatDashboard';
 import AuditTrail from './pages/AuditTrail';
 import AdminRegister from './pages/AdminRegister';
-
+import SubDashboard from './pages/Sub-Dashboard';
+import Profile from './pages/Profile';
 
 const store=reduxStore();
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -35,6 +36,8 @@ root.render(
        <Route path="/natDashboard" element={<NatDashboard/>} />
        <Route path="/audit" element={<AuditTrail/>} />
        <Route path="/adminRegister" element={<AdminRegister/>} />
+       <Route path="/subDashboard" element={<SubDashboard/>} />
+       <Route path="/profile" element={<Profile/>} />
        {/* <Route path="/h" element = {<Home/>}/> */}
         {/* <Route path="/addNewRecord" element={<AddNewRecord />} />
         <Route path="/showDetails" element={<ShowDetails />} />

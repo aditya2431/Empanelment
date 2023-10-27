@@ -10,6 +10,12 @@
     background-position: center;
     background-attachment: fixed; 
   }
+  .background{
+    background-image: url('../assets/background1.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+  }
   
   .custom-table {
     margin-left: 110px;
@@ -28,7 +34,7 @@
   }
   
   .custom-table th {
-    background-color: black;
+    background-color: #2980b9;
     color: white;
   }
   

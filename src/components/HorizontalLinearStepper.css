@@ -18,3 +18,14 @@
   margin-left: 80px;
   z-index: 1;
     }
+    .card-img1{
+      position: absolute;
+top: 0;
+left: 0;
+max-width: 90px;
+max-height: 80px;
+
+margin-top:10px;
+margin-left: 10px;
+z-index: 1;
+  }
