@@ -1,3 +1,14 @@
 .drawerList{
     font-size: 10px;
 }
+.css-1m5i5w0-MuiButtonBase-root-MuiListItemButton-root:hover{
+    background: #e77c75 !important;
+    color: white;
+}
+.css-1fqi8hc-MuiButtonBase-root-MuiListItemButton-root:hover{
+    background: #e77c75 !important;
+    color: white;
+}
+/* .css-1ddsiuw-MuiListItemIcon-root:hover{
+    color: white;
+} */
