@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
 import Logo from "../assets/Logo.JPG";
+import Background from "../assets/background1.avif"
 import { Navigate, useNavigate } from 'react-router-dom';
 import { TextField } from "@mui/material";
 function Login() {
@@ -15,12 +16,14 @@ function Login() {
 
   return (
     <>
-     <img
+    
+    <div className="main-container" >
+    <img
         className="login-img"
         src={Logo}
         alt="Card"
         />
-    <div className="login-container">
+      <img className='login-container' src={Background} alt="xyz"/>
       <div className="login-card">
         <div className="login-card-left">
         <div className="icon">
@@ -36,7 +39,7 @@ function Login() {
           <div className="form-group1">
             {/* <label>Email:</label> */}
             <input
-            style={{borderLeft:"solid",borderLeftColor:"blue"}}
+            style={{borderLeft:"solid",borderLeftColor:"#e77c75"}}
               type="text"
               value={email}
               placeholder='Email'
@@ -56,7 +59,7 @@ function Login() {
             {/* <label>Password:</label> */}
             <input
             placeholder='Password'
-            style={{borderLeft:"solid",borderLeftColor:"blue"}}
+            style={{borderLeft:"solid",borderLeftColor:"#e77c75"}}
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
