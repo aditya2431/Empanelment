@@ -1,12 +1,19 @@
-/* body {
-    background: red;
-    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
-    background: linear-gradient(to right, #0083B0, #00B4DB);
-    min-height: 100vh;
+
+.main-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.form-control::placeholder {
-    font-style: italic;
-    font-size: 0.85rem;
-    color: #aaa;
-} */
+.background-container {
+    display: flex;
+    -webkit-filter: hue-rotate(516deg);
+    filter: hue-rotate(516deg);
+    width: 100%;
+    position: absolute;
+    /* height: 100vh; */
+}
+::-webkit-scrollbar {
+    display: none;
+}

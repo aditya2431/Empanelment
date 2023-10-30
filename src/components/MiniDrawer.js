@@ -76,6 +76,49 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
+const miniDrawerComponents=[{
+  index:0,
+  url:'/dashboard',
+  component:"",
+  menuName:'My Dashboard',
+  icon:<DashboardIcon/>
+},
+{
+  index:1,
+  url:'/dashboard',
+  component:"",
+  menuName:'My Workflows',
+  icon:<ManageSearchOutlinedIcon/>
+},
+{
+  index:2,
+  url:'/',
+  component:"",
+  menuName:'Search Workflows',
+  icon:<ManageSearchOutlinedIcon/>
+},
+{
+  index:3,
+  url:'/audit',
+  component:"",
+  menuName:'Audit Trails',
+  icon:<ReceiptLongOutlinedIcon/>
+},
+{
+  index:4,
+  url:'/profile',
+  component:"",
+  menuName:'My Profile',
+  icon:<AccountCircleOutlinedIcon/>
+},
+{
+  index:5,
+  url:'/',
+  component:"",
+  menuName:'Logout',
+  icon:<LogoutOutlinedIcon/>
+},
+]
 export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -89,157 +132,35 @@ export default function MiniDrawer() {
       <Drawer className="drawer" variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={() => setOpen(!open)}>
-            {console.log(open)}
             {open === false ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
         <Divider />
         <List className="drawerList">
-          {[
-            "My Dashboard", //--index=0
-            "My Workflows",  //--index=1
-            "Search Workflows",//--index=2
-            "Audit Trails",//--index=3
-            "My Profile",//--index=4
-            "Logout",//--index=5
-          ].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              {index == 0 && (
-                <ListItemButton
-                  button
-                  component={Link}
-                  to="/dashboard"
-                  // button component={Link} to="/"
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <DashboardIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              )}
-              {/* {index == 1 && (
-                <ListItemButton
-                  //  button component={Link} to="/"
-
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <AccountTreeOutlinedIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              )} */}
-              {index == 2 && (
-                <ListItemButton
-                  //  button component={Link} to="/"
-
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <ManageSearchOutlinedIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              )}
-              {index == 3 && (
-                <ListItemButton
-                   button component={Link} to="/audit"
-
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <ReceiptLongOutlinedIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              )}
-              {index == 4 && (
-                <ListItemButton
-                   button component={Link} to="/profile"
-
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <AccountCircleOutlinedIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              )}
-              {index == 5 && (
-                <ListItemButton
-                  //  button component={Link} to="/"
-                  button component={Link} to="/"
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                  
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <LogoutOutlinedIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              )}
-            </ListItem>
+         { miniDrawerComponents.map((_menuDetails)=>(
+             <ListItemButton
+             button
+             component={Link}
+             to={_menuDetails.url}
+             // button component={Link} to="/"
+             sx={{
+               minHeight: 48,
+               justifyContent: open ? "initial" : "center",
+               px: 2.5,
+             }}
+           >
+             <ListItemIcon
+               sx={{
+                 minWidth: 0,
+                 mr: open ? 3 : "auto",
+                 justifyContent: "center",
+                 
+               }}
+             >
+               {_menuDetails.icon}
+             </ListItemIcon>
+             <ListItemText primary={_menuDetails.menuName} sx={{ opacity: open ? 1 : 0 }} />
+           </ListItemButton>
           ))}
         </List>
       </Drawer>
