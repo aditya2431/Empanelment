@@ -7,16 +7,16 @@ import { Provider } from 'react-redux';
 
 import reduxStore from "./redux/store"
 // import { Home, AddNewRecord, ShowDetails, ContactPage, Login, Register, PageNotFound, ViewDetails,} from "./pages";
-import Login from "./pages/adminlogin";
+import Login from "./pages/Login/adminlogin";
 import Dashboard from "./pages/Dashboard";
 // import Home from "./pages/Home";
 import App from './App';
-import Register from './pages/Register';
-import VerifyOtp from './pages/VerifyOtp';
-import UserLogin from './pages/UserLogin';
+import Register from './pages/Register/Register';
+import VerifyOtp from './pages/Login/VerifyOtp';
+import UserLogin from './pages/Login/UserLogin';
 import NatDashboard from './pages/NatDashboard';
 import AuditTrail from './pages/AuditTrail';
-import AdminRegister from './pages/AdminRegister';
+import AdminRegister from './pages/Register/AdminRegister';
 import SubDashboard from './pages/Sub-Dashboard';
 import Profile from './pages/Profile';
 import './index.css'
