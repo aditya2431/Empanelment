@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './LoginPage.css';
 import Logo from "../../assets/Logo.JPG";
 import { Navigate, useNavigate } from 'react-router-dom';
+import Background from "../../assets/background1.avif"
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,13 +13,14 @@ function Login() {
    }
   };
   return (
-    <>
+    <div className="main-container">
      <img
         className="login-img"
         src={Logo}
         alt="Card"
         />
-    <div className="login-container">
+         <img className='login-container' src={Background} alt="xyz"/>
+    
       <div className="login-card">
         <div className="login-card-left">
         <div className="icon">
@@ -37,7 +39,7 @@ function Login() {
             <div className="input-with-icon">
             <i className="fas fa-user-alt" />
             <input
-            style={{borderLeft:"solid",borderLeftColor:"blue"}}
+            className='textBox-border'
               type="text"
               value={email}
               placeholder='Email'
@@ -50,7 +52,6 @@ function Login() {
         </div>
       </div>
     </div>
-    </>
   );
 }
 
