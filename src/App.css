@@ -38,14 +38,17 @@
 }
 
 .stepper{
+  z-index:-1;
   background-image: url(assets/background1.avif);
   align-items: center;
   margin-left: 10px;
- /* Specify the path to your image */
-  background-size: cover; /* Adjust to 'contain', 'cover', or specific dimensions as needed */
-  background-position: center center; /* Adjust the image position */
+  background-size: cover; 
+  background-position: center center; /* Adjust the image position*/
   background-repeat: no-repeat; 
   backface-visibility: visible;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  /* -webkit-filter: hue-rotate(516deg);
+  filter: hue-rotate(516deg);
+   */
 
 }

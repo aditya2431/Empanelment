@@ -20,6 +20,7 @@ import AdminRegister from './pages/AdminRegister';
 import SubDashboard from './pages/Sub-Dashboard';
 import Profile from './pages/Profile';
 import './index.css'
+import SearchWorkflow from './pages/SearchWorkflow';
 
 const store=reduxStore();
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -39,6 +40,7 @@ root.render(
        <Route path="/adminRegister" element={<AdminRegister/>} />
        <Route path="/subDashboard" element={<SubDashboard/>} />
        <Route path="/profile" element={<Profile/>} />
+       <Route path="/searchWorkflow" element={<SearchWorkflow/>} />
        {/* <Route path="/h" element = {<Home/>}/> */}
         {/* <Route path="/addNewRecord" element={<AddNewRecord />} />
         <Route path="/showDetails" element={<ShowDetails />} />

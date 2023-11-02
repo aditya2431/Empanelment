@@ -83,36 +83,36 @@ const miniDrawerComponents=[{
   menuName:'My Dashboard',
   icon:<DashboardIcon/>
 },
+// {
+//   index:1,
+//   url:'/dashboard',
+//   component:"",
+//   menuName:'My Workflows',
+//   icon:<ManageSearchOutlinedIcon/>
+// },
 {
   index:1,
-  url:'/dashboard',
-  component:"",
-  menuName:'My Workflows',
-  icon:<ManageSearchOutlinedIcon/>
-},
-{
-  index:2,
-  url:'/',
+  url:'/searchWorkflow',
   component:"",
   menuName:'Search Workflows',
   icon:<ManageSearchOutlinedIcon/>
 },
 {
-  index:3,
+  index:2,
   url:'/audit',
   component:"",
   menuName:'Audit Trails',
   icon:<ReceiptLongOutlinedIcon/>
 },
 {
-  index:4,
+  index:3,
   url:'/profile',
   component:"",
   menuName:'My Profile',
   icon:<AccountCircleOutlinedIcon/>
 },
 {
-  index:5,
+  index:4,
   url:'/',
   component:"",
   menuName:'Logout',
