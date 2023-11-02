@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
-import Logo from "../assets/Logo.JPG";
-import Background from "../assets/background1.avif"
+import Logo from "../../assets/Logo.JPG";
+import Background from "../../assets/background1.avif"
 import { Navigate, useNavigate } from 'react-router-dom';
-import { TextField } from "@mui/material";
+import { TextField,Link } from "@mui/material";
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,8 +27,6 @@ function Login() {
       <div className="login-card">
         <div className="login-card-left">
         <div className="icon">
-            {/* You can add suitable icons here */}
-            {/* <i className="fa fa-user"></i> */}
           </div>
           <h1 >Welcome to Aditya Birla Capital Family</h1>
           <p >You are a few steps away. Login to start your journey with us.</p>
@@ -39,7 +37,7 @@ function Login() {
           <div className="form-group1">
             {/* <label>Email:</label> */}
             <input
-            style={{borderLeft:"solid",borderLeftColor:"#e77c75"}}
+            className='textBox-border'
               type="text"
               value={email}
               placeholder='Email'
@@ -59,7 +57,7 @@ function Login() {
             {/* <label>Password:</label> */}
             <input
             placeholder='Password'
-            style={{borderLeft:"solid",borderLeftColor:"#e77c75"}}
+            className='textBox-border'
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -67,6 +65,7 @@ function Login() {
           </div>
           <button onClick={handleLogin}>Login</button>
           
+        <Link href="/register">New user? Register</Link>
         </div>
       </div>
     </div>

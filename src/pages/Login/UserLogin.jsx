@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
-import Logo from "../assets/Logo.JPG";
+import Logo from "../../assets/Logo.JPG";
 import { Navigate, useNavigate } from 'react-router-dom';
+import Background from "../../assets/background1.avif"
 function Login() {
-  const [OTP, setOTP] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const handleLogin = () => {
-   if(OTP==="123456"){
-    navigate("/home");
+   if(email==="admin"&& password==="admin"){
+    navigate("/dashboard");
    }
   };
   return (
-    <>
+    <div className="main-container">
      <img
         className="login-img"
         src={Logo}
         alt="Card"
         />
-    <div className="login-container">
+         <img className='login-container' src={Background} alt="xyz"/>
+    
       <div className="login-card">
         <div className="login-card-left">
         <div className="icon">
@@ -26,31 +28,30 @@ function Login() {
             {/* <i className="fa fa-user"></i> */}
           </div>
           <h1 style={{fontFamily:"Noto Sans"}}>Welcome to Aditya Birla Capital Family</h1>
-          <p style={{fontFamily:"Noto Sans"}}>Enter the 6-Digit OTP received to initiate the journey
-          </p>
+          <p style={{fontFamily:"Noto Sans"}}>Login to start your journey with us.<br></br>
+          Enter your Email ID to get the OTP</p>
           
         </div>
         <div className="login-card-right-user">
-          <h2 style={{fontFamily:"Noto Sans"}}>Verify OTP</h2>
+          <h2 style={{fontFamily:"Noto Sans"}}>Login</h2>
           <div className="form-group1">
             {/* <label>Email:</label> */}
             <div className="input-with-icon">
             <i className="fas fa-user-alt" />
             <input
-            style={{borderLeft:"solid",borderLeftColor:"blue"}}
+            className='textBox-border'
               type="text"
-              value={OTP}
-              placeholder='Enter 6-digit OTP'
-              onChange={(e) => setOTP(e.target.value)}
+              value={email}
+              placeholder='Email'
+              onChange={(e) => setEmail(e.target.value)}
             />
             </div>
           </div>
-          <button onClick={handleLogin}>Verify</button>
+          <button onClick={handleLogin}>Send OTP</button>
           
         </div>
       </div>
     </div>
-    </>
   );
 }
 
