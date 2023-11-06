@@ -90,29 +90,29 @@ const miniDrawerComponents=[{
 //   menuName:'My Workflows',
 //   icon:<ManageSearchOutlinedIcon/>
 // },
+// {
+//   index:1,
+//   url:'/searchWorkflow',
+//   component:"",
+//   menuName:'Search Workflows',
+//   icon:<ManageSearchOutlinedIcon/>
+// },
 {
   index:1,
-  url:'/searchWorkflow',
-  component:"",
-  menuName:'Search Workflows',
-  icon:<ManageSearchOutlinedIcon/>
-},
-{
-  index:2,
   url:'/audit',
   component:"",
   menuName:'Audit Trails',
   icon:<ReceiptLongOutlinedIcon/>
 },
 {
-  index:3,
+  index:2,
   url:'/profile',
   component:"",
   menuName:'My Profile',
   icon:<AccountCircleOutlinedIcon/>
 },
 {
-  index:4,
+  index:3,
   url:'/',
   component:"",
   menuName:'Logout',

@@ -1,11 +1,16 @@
 // TableComponent.js
-import React from 'react';
+import React, {useState}from 'react';
 import './TableComponent.css'; // Import the CSS file
 import { Link } from "react-router-dom";
 import MiniDrawer from '../components/MiniDrawer';
 import Logo from "../assets/Logo.JPG";
+import Form from "react-bootstrap/Form";
 const Dashboard = () => {
+
+  const [search, setSearch] = useState("");
   return (
+    
+
     <>
     <MiniDrawer/>
     <img
@@ -15,6 +20,24 @@ const Dashboard = () => {
         />
     {/* <h1 style={{fontSize:20,marginLeft:570,marginBottom:20,fontFamily:"Noto Sans",fontWeight:"bold"}}>DashBoard For RM</h1> */}
     <div className="table-container">
+    <div >
+
+          <div className="formCR">
+            <Form>
+              <Form.Group class="my-3">
+              
+                <Form.Control
+                  class="px-3"
+                  type="text"
+                  placeholder="Search using workflow Number"
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+              </Form.Group>
+            </Form>
+            <br></br>
+          </div>
+          <div className="text-center">
+           
       <table className="custom-table">
         <thead>
           <tr>
@@ -24,25 +47,10 @@ const Dashboard = () => {
             <th>Status</th>
           </tr>
         </thead>
-        {/* <tbody>
-          <tr>
-            <td>Total request raised</td>
-            <td><Link to={"/home"}>10</Link></td>
-          </tr>
-          <tr>
-            <td>Activity 2</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>Activity 3</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>Activity 4</td>
-            <td>20</td>
-          </tr>
-        </tbody> */}
+       
       </table>
+    </div>
+    </div>
     </div>
     </>
   );

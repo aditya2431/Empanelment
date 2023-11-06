@@ -18,10 +18,10 @@
   }
   
   .custom-table {
-    margin-left: 110px;
+    margin-left: 100px;
     border-collapse: collapse;
     width: 80%;
-    border: 2px solid #3498db;
+    border: 2px solid #E55451;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -34,7 +34,7 @@
   }
   
   .custom-table th {
-    background-color: #2980b9;
+    background-color: #E55451;
     color: white;
   }
   
