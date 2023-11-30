@@ -2,6 +2,7 @@ import {
   LOGIN_SUCESS,
   USER_OBJECT,
   IS_ADMIN_USER,
+  WORKFLOW_OBJECT,
   MULTISTEP_FORM_OBJECT
 } from "./types";
 
@@ -20,6 +21,10 @@ export const setAdminUser = (result) => ({
   payload: result,
 });
 
+export const setWorkflowObject = (result) => ({
+  type: WORKFLOW_OBJECT,
+  payload: result,
+});
 // export const setMultistepFormObject = (result) => ({
 //   type: MULTISTEP_FORM_OBJECT,
 //   payload: result,

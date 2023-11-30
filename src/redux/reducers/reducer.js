@@ -3,12 +3,14 @@ import {
   USER_OBJECT,
   IS_ADMIN_USER,
   MULTISTEP_FORM_OBJECT,
+  WORKFLOW_OBJECT
 } from "../types";
 
 export const INITIAL_STATE = {
   isLoginSuccess: false,
   userObject: {},
   isAdminUser: false,
+  workflowObject:{},
   multistepFormObject:[{}]
 };
 
@@ -42,9 +44,16 @@ const LoginReducer = (state = INITIAL_STATE, action) => {
               [action.payload.newObject.id]: action.payload.newObject,
             },
           };
+          
     
       
         }
+        case WORKFLOW_OBJECT:
+          return {
+            ...state,
+            workflowObject: action.payload,
+          };
+
     default:
       return state;
   }

@@ -3,13 +3,19 @@ import * as yup from "yup";
 
 export const Schema = yup.object().shape({
     provider: yup.string().
-    required("Provider Name is a required Feild")
+    required("Provider Name is a required Field")
     .min(4,"Provider Name must be greater than 4 letters")
-    .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field "),
+    .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this Field "),
 
-    addressLine1:yup.string().required("Address Line 1 is a required Feild")
+    addressLine1:yup.string().required("Address Line 1 is a required Field")
     .min(4,"Address Line 1 must be greater than 4 letters")
-    .matches(/^[aA-zZ\s/-]+$/, "No Special Characters are allowed for this field "),
+    .matches(/^[aA-zZ\s/-]+$/, "No Special Characters are allowed for this Field "),
+
+    zipCode:yup.string().required("Zip Code is a required Field")
+    .max(6,"ZipCode must not be greater than 6 digits")
+    .matches(/^[0-9\b]+$/, "Only digits are allowed for this Field "),
+
+
 })
 const today = new Date();
 today.setHours(0, 0, 0, 0)
@@ -18,14 +24,15 @@ export const ProviderInformationval =
  yup.object().shape({
 
     rohini:yup.string().
-    required("Rohini ID is a required Feild")
+    required("Rohini ID is a required Field")
     .min(4,"Must be greater than 4 letters")
-    .matches(/^[aA-zZ0-9\s]+$/, "Only alphabets and Numbers are allowed for this field "),
+    .max(13, "RohiniID must no exceed 13 digits")
+    .matches(/^[aA-zZ0-9\s]+$/, "Only alphabets and Numbers are allowed for this Field "),
 
-    rohiniExpiry:yup.date().required("Rohini Code Expiry Date is a required feild")
+    rohiniExpiry:yup.date().required("Rohini Code Expiry Date is a required Field")
     .min(today,"Must not be in Past"),
 
-    registrationExpiry:yup.date().required("Rohini Code Expiry Date is a required feild")
+    registrationExpiry:yup.date().required("Rohini Code Expiry Date is a required Field")
     .min(today,"Must not be in Past"),
 })
 

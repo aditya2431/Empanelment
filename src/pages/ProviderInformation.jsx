@@ -38,7 +38,7 @@ function ProviderInformation(props) {
     id: 1,
     "Rohini ID": rohiniID,
     "Rohini Code Expiry Date": rohiniCodeExpiryDate,
-    Specialization: specialization,
+    "Specialization": specialization,
     "Sub-Specialization": subSpecialization,
     "HFR ID": hfrID,
     "Registration Number": registrationNumber,
@@ -49,11 +49,115 @@ function ProviderInformation(props) {
     "Ownership Type": ownershipType,
   };
  
+  // const onSubmit = () => {
+  //   // props.handleNext();
+  //   // dispatch(setMultistepFormObject());
+
+
+  // };
+
+  
+  // const onSubmit = async () => {
+  //   if (flag) {
+  //     const isValid = await trigger();
+
+  //     if (isValid) {
+  //       onSave();
+  //     } else {
+  //     }
+
+  //     //  await trigger();
+
+  //     //  onSave();
+
+  //     // if (flag) {
+  //     //   await onSave();
+  //     // }
+  //   } else {
+  //     // const request =
+  //     // {generalInformationObject}
+  //     // axios.post('http://10.81.1.250:8080/abhi_timesheet/api/timesheet', request, {credentials: 'include'})
+
+  //     axios
+  //       .post(
+  //         "http://localhost:8181/api/generalInfo/saveGeneralInfo",
+  //         providerInformationObject,
+  //         {
+  //           credentials: "include",
+  //         }
+  //       )
+  //       .then((response) => {
+  //         if (response.status === 200) {
+  //           setApiResponse(response.data);
+  //           setIsProcessing(false);
+  //           toast.dismiss();
+  //           if (apiResponse) {
+  //             toast.success("Details submitted successfully.");
+  //           }
+  //         } else {
+  //           alert("Error scenario");
+  //           setIsProcessing(false);
+  //           toast.dismiss();
+  //           toast.error("Something went wrong");
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //         alert(error.message, "Please try again with CORS free browser");
+  //         setIsProcessing(false);
+  //         toast.dismiss();
+  //         toast.error("Something went wrong");
+  //       });
+  //   }
+  // };
+
+  
+  // const onSave = async () => {
+  //   // const request =
+  //   // {generalInformationObject}
+  //   // axios.post('http://10.81.1.250:8080/abhi_timesheet/api/timesheet', request, {credentials: 'include'})
+
+  //   // axios
+  //   //   .post("http://localhost:8181/api/generalInfo/saveGeneralInfo", generalInformationObject, {
+  //   //     credentials: "include",
+  //   //   })
+  //   axios
+  //     .post(
+  //       "http://localhost:8181/api/generalInfo/saveGeneralInfo",
+  //       getResponse,
+  //       {
+  //         credentials: "include",
+  //       }
+  //     )
+  //     .then((response) => {
+  //       if (response.status === 200) {
+  //         setApiResponse(response.data);
+  //         setIsProcessing(false);
+  //         toast.dismiss();
+  //         if (apiResponse) {
+  //           toast.success("Details submitted successfully.");
+  //         }
+  //       } else {
+  //         alert("Error scenario");
+  //         setIsProcessing(false);
+  //         toast.dismiss();
+  //         toast.error("Something went wrong");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       alert(error.message, "Please try again with CORS free browser");
+  //       setIsProcessing(false);
+  //       toast.dismiss();
+  //       toast.error("Something went wrong");
+  //     });
+  // };
   const onSubmit = () => {
     props.handleNext();
+
+    // console.log(getResponse);
     dispatch(setMultistepFormObject(providerInformationObject));
   };
-
   return (
     <>
       <MiniDrawer />
@@ -107,6 +211,7 @@ function ProviderInformation(props) {
                       <div className="form-group">
                         <TextField
                           required
+                          InputLabelProps={{ shrink: true }}  
                           {...register("rohiniExpiry")}
                           error={!!errors.rohiniExpiry}
                           helperText={errors.rohiniExpiry?.message}
@@ -119,7 +224,7 @@ function ProviderInformation(props) {
                             backgroundColor: "#f7f7f7",
                           }}
                           size="string"
-                          // value={addressLine2}
+                          
                           onBlur={(e) =>
                             setRohiniCodeExpiryDate(e.target.value)
                           }
@@ -234,6 +339,7 @@ function ProviderInformation(props) {
                       <div className="form-group">
                         <TextField
                           required
+                          InputLabelProps={{ shrink: true }}  
                           {...register("registrationExpiry")}
                           error={!!errors.registrationExpiry}
                           helperText={errors.registrationExpiry?.message}

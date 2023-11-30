@@ -9,6 +9,7 @@ function AdminRegister() {
   const [mobileNumber,setMobileNumber] = useState('');
   const [role,setRole] = useState('');
   const [password, setPassword] = useState('');
+  const [ZM,setZM] = useState('');
   const navigate = useNavigate();
   const handleLogin = () => {
    if(email==="admin"&& password==="admin"){
@@ -82,6 +83,18 @@ console.log(role);
                 <option value="NAT">NAT</option>
               </select>
             </div>
+            {role==="RM"&&
+            <div className="form-group1">
+            {/* <label>Email:</label> */}
+            <input
+            className='textBox-border'
+              type="text"
+              value={ZM}
+              placeholder='Zonal Manager'
+              onChange={(e) => setZM(e.target.value)}
+            />
+          </div>
+            }
 
           <button onClick={handleLogin}>Register</button>
           
